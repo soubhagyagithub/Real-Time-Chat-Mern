@@ -13,7 +13,7 @@ import Toaster from "./ui/Toaster";
 import ChatAreaSkeleton from "./ui/ChatAreaSkeleton";
 import MessageArea from "./MessageArea";
 import MessageInput from "./MessageInput";
-const ENDPOINT = "https://realtime-chat-server-sgpt.onrender.com/";
+const ENDPOINT = "https://real-time-chat-be-tnoj.onrender.com/";
 
 // const ENDPOINT = "http://localhost:4000/";
 var socket, selectedChatCompare;
