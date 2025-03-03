@@ -14,7 +14,7 @@ import ChatAreaSkeleton from "./ui/ChatAreaSkeleton";
 import MessageArea from "./MessageArea";
 import MessageInput from "./MessageInput";
 
-const ENDPOINT = "https://real-time-chat-backend-psi.vercel.app";
+const ENDPOINT = "https://real-time-chat-backend-five.vercel.app/";
 var socket, selectedChatCompare;
 function ChatArea() {
   const dispatch = useDispatch();
