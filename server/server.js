@@ -13,9 +13,13 @@ connectDb();
 
 const app = express();
 app.use(express.json());
+const allowedOrigins = ["https://real-time-chat-frontend-sandy.vercel.app"];
+
 app.use(
   cors({
-    origin: "*",
+    origin: allowedOrigins,
+    methods: ["GET", "POST"],
+    credentials: true,
   })
 );
 
@@ -39,7 +43,9 @@ const httpServer = createServer(app);
 const port = process.env.PORT || 5001;
 const io = new Server(httpServer, {
   cors: {
-    origin: "*",
+    origin: allowedOrigins,
+    methods: ["GET", "POST"],
+    credentials: true,
   },
   pingTimeout: 60000,
 });
