@@ -94,7 +94,7 @@ const Sidebar = () => {
           authorization: `Bearer ${user.token}`,
         },
       };
-      await api.get("chat/", config).then(({ data }) => {
+      await api.get("/chat/", config).then(({ data }) => {
         const filterChat = data.filter((chat) =>
           chat.chatName.toLowerCase().includes(searchTerm.toLowerCase())
         );

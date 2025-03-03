@@ -52,7 +52,7 @@ const CreateGroup = () => {
     };
     if (selectedMembers.length > 0 && groupName !== "") {
       await api.post(
-        "chat/createGroup",
+        "/chat/createGroup",
         {
           name: groupName,
           users: selectedMembers,

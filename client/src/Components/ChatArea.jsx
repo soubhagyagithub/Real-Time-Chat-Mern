@@ -14,7 +14,7 @@ import ChatAreaSkeleton from "./ui/ChatAreaSkeleton";
 import MessageArea from "./MessageArea";
 import MessageInput from "./MessageInput";
 
-const ENDPOINT = "https://real-time-chat-backend-five.vercel.app/";
+const ENDPOINT = "https://real-time-chat-backend-five.vercel.app";
 var socket, selectedChatCompare;
 function ChatArea() {
   const dispatch = useDispatch();
@@ -48,7 +48,7 @@ function ChatArea() {
         },
       };
 
-      const { data } = await api.get("message/" + selectedChat?._id, config);
+      const { data } = await api.get("/message/" + selectedChat?._id, config);
       setAllMessages(data);
     } catch (error) {
       console.error(error?.message);
@@ -67,7 +67,7 @@ function ChatArea() {
         },
       };
       const { data } = await api.post(
-        "message/",
+        "/message/",
         {
           content: messageContent,
           chatId: selectedChat?._id,
@@ -115,7 +115,7 @@ function ChatArea() {
       };
 
       await api.put(
-        "chat/groupExit",
+        "/chat/groupExit",
         {
           chatId: selectedChat._id,
           userId: userData.data._id,
