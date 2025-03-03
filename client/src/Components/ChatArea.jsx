@@ -13,9 +13,8 @@ import Toaster from "./ui/Toaster";
 import ChatAreaSkeleton from "./ui/ChatAreaSkeleton";
 import MessageArea from "./MessageArea";
 import MessageInput from "./MessageInput";
-// const ENDPOINT = "https://realtime-chat-server-sgpt.onrender.com/";
 
-const ENDPOINT = "http://localhost:4000/";
+const ENDPOINT = import.meta.env.VITE_BACKEND_URL;
 var socket, selectedChatCompare;
 function ChatArea() {
   const dispatch = useDispatch();
