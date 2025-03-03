@@ -33,7 +33,7 @@ const MobileChats = () => {
           authorization: `Bearer ${user.token}`,
         },
       };
-      await api.get("/chat/", config).then(({ data }) => {
+      await api.get("chat/", config).then(({ data }) => {
         dispatch(setChats(data));
       });
       setLoaded(true);

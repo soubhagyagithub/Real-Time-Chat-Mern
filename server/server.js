@@ -15,8 +15,7 @@ const app = express();
 app.use(express.json());
 app.use(
   cors({
-    origin: ["https://real-time-chat-frontend-sandy.vercel.app"],
-    credentials: true,
+    origin: "*",
   })
 );
 
@@ -40,8 +39,7 @@ const httpServer = createServer(app);
 const port = process.env.PORT || 5001;
 const io = new Server(httpServer, {
   cors: {
-    origin: ["https://real-time-chat-frontend-sandy.vercel.app"],
-    credentials: true,
+    origin: "*",
   },
   pingTimeout: 60000,
 });

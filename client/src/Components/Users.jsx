@@ -35,7 +35,7 @@ const Users = () => {
         authorization: `Bearer ${userData.data.token}`,
       },
     };
-    api.get("/user/fetchUsers", config).then((response) => {
+    api.get("user/fetchUsers", config).then((response) => {
       setUsers(response.data);
       setLoaded(true);
     });
@@ -101,7 +101,7 @@ const Users = () => {
                           },
                         };
                         const { data } = await api.post(
-                          "/chat/",
+                          "chat/",
                           {
                             userId: user._id,
                           },
