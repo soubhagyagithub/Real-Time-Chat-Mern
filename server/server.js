@@ -43,7 +43,7 @@ const io = new Server(httpServer, {
     origin: ["https://real-time-chat-frontend-sandy.vercel.app"],
     credentials: true,
   },
-  transports: ["websocket", "polling"],
+  pingTimeout: 60000,
 });
 
 io.on("connection", (socket) => {
